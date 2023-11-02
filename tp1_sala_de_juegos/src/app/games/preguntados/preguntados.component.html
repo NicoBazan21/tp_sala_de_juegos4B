@@ -1,0 +1,50 @@
+<section class="h-100 gradient-form">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+        <div class="card rounded-3 text-black transparente">
+          <div class="row g-0">
+              <div class="card-body">
+                <div class="text-center">
+                  <h4 class="mt-1 mb-1 pb-1 text-white">Preguntados</h4>
+                </div>
+                <form>
+                  <ng-container *ngIf="this.vidas.length > 0 else elseBlock">
+                    <div class="text-center">
+                      <button class="btn btn-primary fa-lg m-3 gradient-custom-2" disabled>Pregunta:</button>
+                    </div>
+                      <ng-container *ngIf="resetear">
+                        <ng-container *ngIf="this.preguntas">
+                          <input type="text" class="form-control"
+                            placeholder={{this.preguntas[numero].question.text}} disabled/>
+                            <ng-container *ngFor="let item of this.opciones">
+                              <div class="row m-2">
+                                <a class="btn btn-secondary" (click)="onClick($event)">{{item}}</a>
+                              </div>
+                            </ng-container>
+                        </ng-container>
+                    </ng-container>
+                      <div class="form-outline mb-4 justify-content-around d-flex">
+                          <label class="btn btn-danger fa-lg m-3">
+                            <ng-container *ngFor="let item of this.vidas">
+                              <img class="m-1" src="assets/img/vidas/pngfind.com-minecraft-heart-png-697698.png" style="width: 20px;">
+                            </ng-container>
+                          </label>
+                            <a class="btn btn-primary fa-lg m-3 gradient-custom-2"
+                            (click)="resetearJuego()">Siguiente pregunta!.</a>
+                      </div>
+                  </ng-container>
+                  <ng-template #elseBlock>
+                    <div class="text-center">
+                      <h5 class="mt-1 mb-1 pb-1">Te has quedado sin vidas</h5>
+                    </div>
+                    <button class="btn btn-info" routerLink="/games">Sala de juegos</button>
+                  </ng-template>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

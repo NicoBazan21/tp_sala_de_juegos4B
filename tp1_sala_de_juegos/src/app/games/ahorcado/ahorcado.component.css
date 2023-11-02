@@ -1,0 +1,28 @@
+.centrar
+{
+  display: flex;
+  justify-content: center;
+}
+
+.divGrande
+{
+  width: 100%;
+  height: 1px;
+}
+
+.animacion
+{
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein
+{
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

@@ -1,0 +1,5 @@
+.fondo{
+  border-radius: 20px;
+  background: linear-gradient(to right, #4e1637, rgb(37, 53, 196));
+  opacity: 0.8;
+}

@@ -1,0 +1,72 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark sidevar" style="width: 280px;">
+  <a routerLink="/games"  class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"></svg>
+    <span class="fs-4">Sala de juegos</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item ">
+      <a routerLink="/games" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="mayorOMenor" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Mayor o menor
+      </a>
+    </li>
+    <li>
+      <a  routerLink="ahorcado"  class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Ahorcado
+      </a>
+    </li>
+    <li>
+      <a routerLink="preguntados" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Preguntados
+      </a>
+    </li>
+    <li>
+      <a routerLink="blackjack" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        BlackJack
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <ul class="nav nav-pills flex-column">
+    <li>
+      <a routerLink="listas" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Listas
+      </a>
+    </li>
+  </ul>
+  <hr>
+    <ul class="nav nav-pills flex-column">
+    <li>
+      <a routerLink="chat" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Chat
+      </a>
+    </li>
+    <li>
+      <a routerLink="encuesta" class="nav-link text-white">
+        <svg class="bi me-2" width="16" height="16"></svg>
+        Encuestas
+      </a>
+    </li>
+    </ul>
+  <hr>
+
+  <a>Sesion: {{user.mail}}</a>
+  <a>Puntos: {{user.puntos}}</a>
+
+  <hr>
+  <button class="text-white btn transparente" (click)="cerrarSesion()">Cerrar sesion</button>
+</div>
+
+<div class="marca col-8"><router-outlet></router-outlet> </div>

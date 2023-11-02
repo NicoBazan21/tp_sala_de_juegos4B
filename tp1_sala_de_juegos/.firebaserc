@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tp-sala-de-juegos-2a3d4": {
+      "hosting": {
+        "tp1_sala_de_juegos": [
+          "tp-sala-de-juegos-2a3d4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tp-sala-de-juegos-2a3d4"
+  }
+}

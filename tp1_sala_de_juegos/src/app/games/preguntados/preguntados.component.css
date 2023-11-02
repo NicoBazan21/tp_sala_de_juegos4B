@@ -1,0 +1,31 @@
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #4e1637, rgb(37, 53, 196))
+  }
+
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }
+.gradient-form
+{
+  opacity: 0.9;
+}
+
+.transparente
+{
+  border-radius: 50%;
+  background: linear-gradient(to right, #4e1637, rgb(37, 53, 196))
+}
+
+input
+{
+  opacity: 0.6;
+}

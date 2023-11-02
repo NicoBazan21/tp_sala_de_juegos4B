@@ -1,0 +1,29 @@
+.centrar
+{
+  display: flex;
+  justify-content: center;
+}
+
+.animacion
+{
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+
+.animacionCrupier
+{
+  animation-duration: 2.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein
+{
+  from {
+    margin-left: 50%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}

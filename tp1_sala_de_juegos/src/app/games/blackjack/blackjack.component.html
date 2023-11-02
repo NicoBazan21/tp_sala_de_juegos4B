@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="row">
+    <div class="centrar row">
+      <div class="centrar">
+        <button class="btn btn-secondary col-sm-3" disabled *ngIf="this.finalizar == false">Mano del crupier: {{this.valorProvisional}}</button>
+        <button class="btn btn-secondary col-sm-3" disabled *ngIf="this.finalizar == true">Mano del crupier: {{this.valorCrupierFinal}}</button>
+      </div>
+
+      <div class="centrar">
+        <ng-container *ngIf="finalizar == true else elseBlock">
+          <ng-container *ngFor="let item of manoCrupier">
+            <img src={{item.carta}} style="width: 120px;">
+          </ng-container>
+        </ng-container>
+        <ng-template #elseBlock>
+          <img class="animacionCrupier" src="{{this.imgCrupier}}" style="width: 120px;">
+        </ng-template>
+      </div>
+
+      <div class="centrar">
+          <button class="btn btn-success m-5" (click)="this.pedir()" [disabled]="finalizar">Pedir </button>
+          <button class="btn btn-primary m-5" (click)="this.quedarse()"[disabled]="finalizar">Quedarse </button>
+          <button class="btn btn-dark m-5" (click)="this.reiniciar()"[disabled]="!finalizar">Reiniciar </button>
+      </div>
+      <button class="btn btn-secondary col-sm-3" disabled >Tu mano: {{this.valorJugador}}</button>
+      <div class="centrar">
+        <ng-container *ngIf="finalizar == true else elseBlockk">
+          <ng-container *ngFor="let item of manoJugador">
+            <img class="animacion" src={{item.carta}} style="width: 120px;">
+          </ng-container>
+        </ng-container>
+        <ng-template #elseBlockk>
+          <ng-container *ngFor="let item of manoJugador">
+          <img class="animacion" src={{item.carta}} style="width: 120px;">
+          </ng-container>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+
+

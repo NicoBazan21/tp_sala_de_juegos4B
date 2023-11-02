@@ -1,0 +1,19 @@
+.sidevar
+{
+  position: absolute;
+  height: 100%;
+  width: 22%;
+}
+
+.marca
+{
+  position: relative;
+  left: 22%;
+  width: 78%;
+  height: 100%;
+}
+
+.transparente
+{
+  background: linear-gradient(to right, #4e1637, rgb(37, 53, 196))
+}
